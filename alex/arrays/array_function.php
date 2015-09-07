@@ -7,7 +7,7 @@ $numbers = range(10, 100);
 // array_map
 
 function cube_square($x) {
-	return pow($x, 3)+ pow($x, 2);
+	return pow($x, 3) + pow($x, 2);
 }
 
 $num_mapped = array_map("cube_square", $numbers);
