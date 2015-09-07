@@ -28,7 +28,7 @@ for ($i = 0; $i < sizeof($b) ; $i++) {
 
 $transformed = [];
 
-for ($i = 0, $len = sizeof($matrix); $i <$len ; $i++) { 
+for ($i = 0, $len = sizeof($matrix); $i <$len; $i++) { 
 	$sum = 0;
 	for ($j=0, $innerLen = sizeof($matrix[$i]); $j < $innerLen; $j++) { 
 		$sum += $matrix[$i][$j];
@@ -81,37 +81,3 @@ if (!function_exists("binary_search")) {
 }
 $haystack = range(10, 45);
 echo binary_search($haystack, 100) . "\n";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
