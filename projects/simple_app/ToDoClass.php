@@ -28,6 +28,8 @@ class ToDo {
   }
 
   static function deleteItem($id) {
+    $sql = "DELETE FROM todo WHERE tid = $id";
+    ToDo::$conn->query($sql);
 
   }
 }

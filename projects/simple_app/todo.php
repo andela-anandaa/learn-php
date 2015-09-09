@@ -11,6 +11,13 @@ if (isset($_POST['todo'])) {
 	}
 }
 
+//get the item Id and delete it
+if (isset($_GET['id'])) {
+	$id = $_GET['id'];
+	if($id !== '') {
+		ToDo::deleteItem($id);
+	}
+}
 ?>
 
 <div class="main">
@@ -31,9 +38,9 @@ if (isset($_POST['todo'])) {
 		<?php
 			// todo listing
 			foreach (ToDo::getItems() as $row) {
-				echo "<li>" . $row['item'] . " - " . $row['date_time']. "</li>";
+				echo '<li>' . $row['item'] . ' - ' . $row['date_time']. '</li><a href = "?id='.$row['tid'].' ">
+				     <button>Delete</button></a>';
 			}
-
 		?>
 		</ul>
 	</div>
