@@ -39,7 +39,7 @@ if (isset($_GET['id'])) {
 			// todo listing
 			foreach (ToDo::getItems() as $row) {
 				echo '<li>' . $row['item'] . ' - ' . $row['date_time']. '</li><a href = "?id='.$row['tid'].' ">
-				   delete </a><a>     update</a>';
+				   delete </a><a href= "">     update</a>';
 			}
 		?>
 		</ul>

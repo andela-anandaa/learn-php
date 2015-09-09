@@ -24,7 +24,7 @@ class ToDo {
   }
 
   static function updateItem($id) {
-
+    $sql = "SELECT";
   }
 
   static function deleteItem($id) {
