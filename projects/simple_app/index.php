@@ -2,7 +2,7 @@
 
       <div class="jumbotron">
         <h1>Simple Apps</h1>
-        <p class="lead">To demonstrate working with databases in PHP. For the <strong>#TeamResly</strong>, Andela.</p>      
+        <p class="lead">To demonstrate working with databases in PHP. For the <strong>#TeamResly</strong>, Andela.</p>
       </div>
 
       <div class="row">
@@ -14,8 +14,8 @@
         </div>
 
         <div class="col-lg-6">
-         
+
         </div>
       </div>
 
-<?php include "footer.php"; ?>
+<?php include "inc/footer.php"; ?>
