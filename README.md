@@ -1,4 +1,6 @@
 # learn-php
+[![StyleCI](https://styleci.io/repos/41797829/shield)](https://styleci.io/repos/41797829)
+
 Quick PHP tuts with Andela, Team Resly.
 
 ## Topics Covered
