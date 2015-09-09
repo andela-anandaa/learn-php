@@ -1,7 +1,7 @@
 <?php
   
   // An ordinary array, which is indexed by integers
-  
+
   $a = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
   // short array syntax
@@ -22,7 +22,7 @@
   $rangeArray = range('a', 'm');
 
   for($i = 0; $i < sizeof($a); $i++) {
-      echo $a[$i]."\n";
+      echo $a[$i] . "\n";
   }
 
   /* 
