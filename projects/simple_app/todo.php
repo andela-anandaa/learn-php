@@ -18,6 +18,14 @@ if (isset($_GET['id'])) {
 		ToDo::deleteItem($id);
 	}
 }
+
+if (isset($_GET['id'])) {
+	$id = $_GET['id'];
+	if($id !== '') {
+		ToDo::updateItem($id);
+	}
+}
+
 ?>
 
 <div class="main">
