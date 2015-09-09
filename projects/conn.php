@@ -2,8 +2,8 @@
 
 $host = "localhost";
 $dbname = "learn-php";
-$user = "prof";
-$pass = "pr0f";
+$user = "andela";
+$pass = "andela";
 
 try {
 	$conn = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
