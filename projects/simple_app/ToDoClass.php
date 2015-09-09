@@ -34,5 +34,5 @@ class ToDo {
   }
 }
 
-//initialize
+// initialize a conn object
 $td = new ToDo($conn);
