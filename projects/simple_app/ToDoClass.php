@@ -2,15 +2,16 @@
 require "../conn.php";
 
 class ToDo {
-  static function init() {
-    global $conn;
+  static public $conn;
+
+  function __construct($conn) {
+    ToDo::$conn = $conn;
   }
 
   static function addItem($item) {
     $sql = "INSERT INTO todo (item) VALUES ('" .
   							$item . "')";
-    global $conn;
-  	$conn->query($sql);
+  	ToDo::$conn->query($sql);
     return true;
   }
 
@@ -18,8 +19,7 @@ class ToDo {
     $sql = "SELECT * ,
             DATE_FORMAT(date_time, '%b %d, %Y') as date_time
             FROM todo";
-    global $conn;
-    $result = $conn->query($sql);
+    $result = ToDo::$conn->query($sql);
     return $result;
   }
 
@@ -32,4 +32,5 @@ class ToDo {
   }
 }
 
-ToDo::init();
+//initialize
+$td = new ToDo($conn);
