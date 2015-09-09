@@ -23,12 +23,14 @@ class ToDo {
     return $result;
   }
 
-  static function updateItem($id) {
-
+  static function updateItem($id, $item) {
+    $sql = "UPDATE todo SET item='$item' WHERE tid=$id";
+    ToDo::$conn->query($sql);
   }
 
   static function deleteItem($id) {
-
+    $sql = "DELETE FROM todo WHERE tid=$id";
+    ToDo::$conn->query($sql);
   }
 }
 

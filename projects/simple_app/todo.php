@@ -9,6 +9,15 @@ if (isset($_POST['todo'])) {
 	if ($item !== '') {
 		ToDo::addItem($item);
 	}
+} else if (isset($_POST['id']) && isset($_POST['item']) && isset($_POST['update'])) {
+	$id = $_POST['id'];
+	$item = $_POST['item'];
+
+	ToDo::updateItem($id, $item);
+} else if (isset($_POST['id']) && isset($_POST['delete'])) {
+	$id = $_POST['id']
+
+	ToDo::deleteItem($id);
 }
 
 ?>
@@ -32,6 +41,16 @@ if (isset($_POST['todo'])) {
 			// todo listing
 			foreach (ToDo::getItems() as $row) {
 				echo "<li>" . $row['item'] . " - " . $row['date_time']. "</li>";
+				?>
+
+				<form method="POST">
+					<input type="text" name="item" value="<?php echo $row['item'];?>">
+					<input type="hidden" name="id" value="<?php echo $row['id']; ?>">
+					<button type="submit" name="update">update</button>
+					<button type="submit" name="delete">delete</button>
+				</form>
+
+				<?php
 			}
 
 		?>
