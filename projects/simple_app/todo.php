@@ -22,25 +22,31 @@ if(isset($_POST['update_sent'])) {
 	$result = ToDo::updateItem($_POST['up_id'], $_POST['update_sent']);
 }
 
-if(isset($_GET['update_id'])) {
 ?>
-	<form action="/todo.php" method="post">
-		<div class="input-group">
-	    <input type="text" name="update_sent" class="form-control" 
-	    	placeholder="<?php echo $_GET['update_text'];?>">
-	    <input name="up_id" value= "<?php echo $_GET['update_id']; ?>" hidden>
-	    <span class="input-group-btn">
-	      <button class="btn btn-success" type="submit">Update</button>
-	    </span>
-	  </div>
-	</form>
-<?php
-	}
-?>
+
+
 
 <div class="main">
 	<h2><i class="glyphicon glyphicon-circle-arrow-right"></i> ToDo App</h2>
 	<div class="col-md-6">
+<?php
+
+if(isset($_GET['update_id'])) {
+?>
+		<form action="/todo.php" method="post">
+			<div class="input-group">
+		    <input type="text" name="update_sent" class="form-control" 
+		    	value="<?php echo $_GET['update_text'];?>">
+		    <input name="up_id" value= "<?php echo $_GET['update_id']; ?>" hidden>
+		    <span class="input-group-btn">
+		      <button class="btn btn-success" type="submit">Update</button>
+		    </span>
+		  </div>
+		</form>
+<?php
+	}
+	else {
+?>
 		<form action="" method="post">
 			<div class="input-group">
 	      <input type="text" name="todo" class="form-control" placeholder="Type todo here">
@@ -49,6 +55,8 @@ if(isset($_GET['update_id'])) {
 	      </span>
 	    </div>
 	  </form>
+
+	  <?php } ?>
 	</div>
 
 	<div class="col-md-6 todo">
