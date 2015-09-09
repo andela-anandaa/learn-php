@@ -88,3 +88,8 @@ body {
   border-left: dotted 2px #cecece;
   min-height: 200px;
 }
+
+.image-right {
+  float:right;
+  margin-left: 2px;
+}
