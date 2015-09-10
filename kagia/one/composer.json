@@ -1,0 +1,23 @@
+{
+    "name": "bkagia/one",
+    "description": "checkpoint one",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Benjamin Kagia",
+            "email": "andela-bkagia@users.noreply.github.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpspec/phpspec": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "" : "src"
+        }
+    },
+    "config": {
+        "bin-dir": "bin"
+    }
+}
