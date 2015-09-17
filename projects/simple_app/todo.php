@@ -18,6 +18,14 @@ if (isset($_GET['id'])) {
 		ToDo::deleteItem($id);
 	}
 }
+
+if (isset($_GET['id'])) {
+	$id = $_GET['id'];
+	if($id !== '') {
+		ToDo::updateItem($id);
+	}
+}
+
 ?>
 
 <div class="main">
@@ -39,7 +47,7 @@ if (isset($_GET['id'])) {
 			// todo listing
 			foreach (ToDo::getItems() as $row) {
 				echo '<li>' . $row['item'] . ' - ' . $row['date_time']. '</li><a href = "?id='.$row['tid'].' ">
-				     <button>Delete</button></a>';
+				   delete </a><a href= "">     update</a>';
 			}
 		?>
 		</ul>

@@ -14,6 +14,12 @@ class ToDo {
   	ToDo::$conn->query($sql);
     return true;
   }
+  
+   static function deleteItem($id) {
+    $sql = "DELETE FROM todo WHERE tid = $id";
+    ToDo::$conn->query($sql);
+
+  }
 
   static function getItems() {
     $sql = "SELECT * ,
@@ -24,15 +30,10 @@ class ToDo {
   }
 
   static function updateItem($id) {
-
+    $sql = "SELECT";
   }
 
-  static function deleteItem($id) {
-    $sql = "DELETE FROM todo WHERE tid = $id";
-    ToDo::$conn->query($sql);
-
-  }
 }
 
-//initialize
+// initialize a conn object
 $td = new ToDo($conn);
